@@ -26,7 +26,7 @@ const CharacterGrid: React.FC<CharacterGridProps> = ({ page ,episode}) => {
             const data = await getCharacters(page,episode);
             console.log(loding);
             
-            //setloading(false)
+            setloading(false)
             //console.log(data);
             
             setCharacters(data.results);
