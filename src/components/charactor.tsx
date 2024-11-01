@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getCharacters, getCharactersByEpisode } from "../services/service"
+import Loading from './Loading';
 
 interface Character {
     id: number;
@@ -34,16 +35,7 @@ const CharacterGrid: React.FC<CharacterGridProps> = ({ page ,episode}) => {
     }, [page,episode]);
     if (loding) {
         return(
-            <div 
-            className="d-flex row  mx-auto spinner-border text-danger" 
-            style={{
-              justifyContent: "center",
-              alignItems: "center"
-            }} 
-            role="status"
-          >
-            <span className="visually-hidden">Loading...</span>
-          </div>
+           <Loading/>
           
         )
     }

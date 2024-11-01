@@ -19,7 +19,7 @@ const App: React.FC = () => {
                 </div>
                 <div className="col-9">
                     <h3>Characters</h3>
-                    <CharacterGrid page={page} episode={selectedEpisode} />
+                    <CharacterGrid page={page} episode={selectedEpisode}  />
                     <div className="d-flex justify-content-center mt-4">
                         <button className="btn btn-primary mx-1" onClick={() => handlePageChange(page - 1)} disabled={page === 1}>
                             Previous
