@@ -33,5 +33,9 @@ Follow these instructions to set up the project locally.
 
    ```bash
    git clone https://github.com/yourusername/episodes-characters-browser.git
+   
    cd episodes-characters-browser
+##images
+![image](https://github.com/user-attachments/assets/0cbf6395-25ef-4101-81b4-5588a15eada5)
+
 
