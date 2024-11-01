@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCharacters } from "../services/service"
+import { getCharacters, getCharactersByEpisode } from "../services/service"
 
 interface Character {
     id: number;
@@ -9,18 +9,44 @@ interface Character {
 
 interface CharacterGridProps {
     page: number;
+    episode : number|null
 }
 
-const CharacterGrid: React.FC<CharacterGridProps> = ({ page }) => {
+const CharacterGrid: React.FC<CharacterGridProps> = ({ page ,episode}) => {
+    const [loding,setloading] = useState<boolean>(true)
     const [characters, setCharacters] = useState<Character[]>([]);
 
     useEffect(() => {
         const fetchCharacters = async () => {
-            const data = await getCharacters(page);
+            console.log(episode);
+            setCharacters([])
+            setloading(true)
+            
+            const data = await getCharacters(page,episode);
+            console.log(loding);
+            
+            //setloading(false)
+            //console.log(data);
+            
             setCharacters(data.results);
         };
         fetchCharacters();
-    }, [page]);
+    }, [page,episode]);
+    if (loding) {
+        return(
+            <div 
+            className="d-flex row  mx-auto spinner-border text-danger" 
+            style={{
+              justifyContent: "center",
+              alignItems: "center"
+            }} 
+            role="status"
+          >
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          
+        )
+    }
 
     return (
         <div className="row">

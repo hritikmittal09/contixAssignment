@@ -21,7 +21,7 @@ const EpisodeList: React.FC<EpisodeListProps> = ({ onEpisodeSelect }) => {
         fetchEpisodes();
     }, []);
     const getEpisodeId = (id :any)=>{
-        console.log(id);
+        //console.log(id);
         onEpisodeSelect(id)
         
 
