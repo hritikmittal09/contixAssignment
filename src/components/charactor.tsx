@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCharacters, getCharactersByEpisode } from "../services/service"
+import { getCharacters } from "../services/service"
 import Loading from './Loading';
 
 interface Character {
