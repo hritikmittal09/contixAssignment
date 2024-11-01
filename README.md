@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Episodes and Characters Browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React + TypeScript application that displays a list of episodes and corresponding characters for each episode, with pagination and a skeleton loader for a smooth loading experience. The project leverages Bootstrap for styling and Axios for fetching data from an external API.
 
-Currently, two official plugins are available:
+![App Screenshot](./path-to-your-screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Episode List**: Displays a list of episodes on the left sidebar. Selecting an episode loads characters for that episode.
+- **Character Grid**: Shows a grid of characters for the selected episode, with a skeleton loader while characters are loading.
+- **Pagination**: Navigate through pages of characters.
+- **Skeleton Loading**: Displays placeholder skeletons while data is being fetched.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React** with **TypeScript**
+- **Bootstrap** for styling
+- **Axios** for API calls
+- **React Loading Skeleton** for loading placeholders
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Follow these instructions to set up the project locally.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Prerequisites
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [Node.js](https://nodejs.org/en/download/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/episodes-characters-browser.git
+   cd episodes-characters-browser
+
